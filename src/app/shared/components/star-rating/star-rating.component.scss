@@ -1,0 +1,12 @@
+.star-rating {
+   display: flex;
+   align-items: center;
+
+   .bi-star-fill {
+      color: gold;
+   }
+
+   .rating-label {
+      white-space: nowrap;
+   }
+}

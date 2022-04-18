@@ -1,0 +1,24 @@
+<cdk-virtual-scroll-viewport
+   *ngIf="items?.length"
+   class="selection-list col-lg-7"
+   [itemSize]="74"
+>
+   <div
+      class="item"
+      [ngClass]="{ selected: selectedItems[item.id] }"
+      *cdkVirtualFor="let item of items"
+      (click)="selectItem(item)"
+   >
+      <input
+         class="form-check-input mt-0 me-2"
+         type="checkbox"
+         [checked]="selectedItems[item.id]"
+      />
+      <div class="content">
+         <ng-container
+            [ngComponentOutlet]="item | itemComponent"
+            [ngComponentOutletInjector]="item | itemInjector"
+         ></ng-container>
+      </div>
+   </div>
+</cdk-virtual-scroll-viewport>

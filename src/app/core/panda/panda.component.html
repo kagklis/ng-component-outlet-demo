@@ -1,0 +1,17 @@
+<div class="panda-container">
+   <div class="panda-row">
+      <div
+         [ngClass]="item.sex === 'M' ? 'bi-gender-male' : 'bi-gender-female'"
+      >
+         {{ item.name }}
+      </div>
+   </div>
+   <div class="panda-row">
+      <div class="bi-balloon-fill col-4">
+         {{ item.birthDate | date: "dd/MM/YYYY" }}
+      </div>
+      <div class="bi-geo-alt col-8">
+         {{ item.currentLocation }}
+      </div>
+   </div>
+</div>

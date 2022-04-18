@@ -1,0 +1,12 @@
+<div class="movie-container">
+   <div class="movie-row space-between">
+      <div>
+         <b>{{ item.title }} ({{ item.releaseYear }})</b> -
+         {{ item.durationInMinutes | hours }}
+      </div>
+      <app-star-rating [starRating]="item.starRating"></app-star-rating>
+   </div>
+   <div class="description-container">
+      <div class="description col-12">{{ item.description }}</div>
+   </div>
+</div>
